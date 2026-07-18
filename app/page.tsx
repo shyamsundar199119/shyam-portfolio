@@ -17,6 +17,8 @@ import FloatingBackground from "@/components/FloatingBackground";
 
 import ScrollTop from "@/components/ScrollTop";
 
+import CareerHighlights from "@/components/CareerHighlights";
+
 
 export default function Home(){
 
@@ -34,11 +36,11 @@ return (
 
 <About/>
 
+<CareerHighlights />
+
 <Experience/>
 
 <Skills/>
-
-<Projects/>
 
 <GithubProjects/>
 
