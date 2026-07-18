@@ -1,42 +1,64 @@
 import SectionTitle from "./SectionTitle";
-import { FaGithub } from "react-icons/fa";
 
 
-const projects=[
+const experiences = [
 
 {
-name:"Career Agent AI",
+company:"Mastercard",
+role:"Senior Backend Engineer / BizOps Engineer",
+project:
+"Real-Time Payment Processing Platform",
+
 description:
-"AI powered career assistant that matches resumes with relevant jobs.",
-tech:[
-"Spring Boot",
-"OpenAI",
-"PostgreSQL"
+"Built and supported a highly available real-time payment platform powering financial transactions at enterprise scale.",
+
+highlights:[
+"Developed Java Spring Boot microservices processing 1M+ transactions/day.",
+"Built CI/CD automation pipelines using Jenkins and Chef Habitat.",
+"Implemented observability solutions using Splunk and Dynatrace.",
+"Improved production reliability through automation and root cause analysis."
 ],
-github:"#"
-},
 
-
-{
-name:"Football World Cup Scoreboard",
-description:
-"Java library implementing live football scoring functionality.",
 tech:[
 "Java",
-"JUnit"
-],
-github:"#"
+"Spring Boot",
+"Microservices",
+"Jenkins",
+"Chef Habitat",
+"Splunk",
+"Dynatrace",
+"ActiveMQ"
+]
+
 },
 
 
 {
-name:"Wordle Java Game",
+company:"Verizon",
+role:"Software Engineer",
+project:
+"TradeMore Mobile Device Selling Platform",
+
 description:
-"Command line Wordle implementation using clean Java design.",
-tech:[
-"Java"
+"Developed backend services for a mobile device trade-in platform enabling customers to evaluate and sell used devices.",
+
+highlights:[
+"Developed REST APIs using Java 8, Spring Boot, Spring and Hibernate.",
+"Built backend services using microservice architecture.",
+"Created Swagger API documentation and integration testing.",
+"Performed root cause analysis and resolved production defects."
 ],
-github:"#"
+
+tech:[
+"Java 8",
+"Spring Boot",
+"Hibernate",
+"REST APIs",
+"Microservices",
+"MSSQL",
+"Swagger"
+]
+
 }
 
 
@@ -49,7 +71,7 @@ export default function Projects(){
 return (
 
 <section
-id="projects"
+id="experience"
 className="
 py-20
 px-6
@@ -68,7 +90,7 @@ mx-auto
 
 
 <SectionTitle
-title="Featured Projects"
+title="Professional Experience"
 />
 
 
@@ -76,19 +98,19 @@ title="Featured Projects"
 <div
 className="
 grid
-md:grid-cols-3
-gap-6
+md:grid-cols-2
+gap-8
 "
 >
 
 
 {
-projects.map(project=>(
+experiences.map(exp=>(
 
 
 <div
 
-key={project.name}
+key={exp.company}
 
 className="
 border
@@ -104,14 +126,42 @@ transition
 
 <h3
 className="
-text-xl
+text-2xl
 font-bold
 "
 >
 
-{project.name}
+{exp.company}
 
 </h3>
+
+
+
+<p
+className="
+mt-2
+font-semibold
+text-blue-600
+"
+>
+
+{exp.role}
+
+</p>
+
+
+
+<h4
+className="
+mt-4
+font-semibold
+"
+>
+
+{exp.project}
+
+</h4>
+
 
 
 <p
@@ -122,9 +172,35 @@ dark:text-gray-300
 "
 >
 
-{project.description}
+{exp.description}
 
 </p>
+
+
+
+<ul
+className="
+mt-5
+space-y-2
+text-sm
+text-gray-700
+dark:text-gray-300
+"
+>
+
+{
+exp.highlights.map(item=>(
+
+<li
+key={item}
+>
+• {item}
+</li>
+
+))
+}
+
+</ul>
 
 
 
@@ -138,7 +214,7 @@ mt-5
 >
 
 {
-project.tech.map(t=>(
+exp.tech.map(t=>(
 
 <span
 
@@ -161,6 +237,7 @@ dark:text-blue-200
 
 </span>
 
+
 ))
 }
 
@@ -168,34 +245,10 @@ dark:text-blue-200
 </div>
 
 
-
-<a
-
-href={project.github}
-
-className="
-inline-flex
-items-center
-gap-2
-mt-6
-text-blue-600
-"
-
->
-
-<FaGithub size={18}/>
-
-GitHub
-
-</a>
-
-
-
 </div>
 
 
 ))
-
 }
 
 
@@ -206,6 +259,7 @@ GitHub
 
 
 </section>
+
 
 )
 

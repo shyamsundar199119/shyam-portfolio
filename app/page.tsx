@@ -42,8 +42,6 @@ return (
 
 <GithubProjects/>
 
-<Certifications/>
-
 <Contact/>
 
 <ScrollTop/>

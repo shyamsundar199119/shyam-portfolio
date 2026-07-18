@@ -19,13 +19,13 @@ try {
 
 await emailjs.sendForm(
 
-"service_xp9k3ei",
+process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID!,
 
-"template_it8xv2p",
+process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID!,
 
 e.target,
 
-"hX5p0YfPenGXPF6ws"
+process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY!
 
 );
 
@@ -72,7 +72,7 @@ mx-auto
 
 <SectionTitle
 title="Contact Me"
-subtitle="Let's build something great"
+subtitle="Have an idea? Let's build it. Or let's talk tech over a coffee—or a beer. Skål! 🍺"
 />
 
 

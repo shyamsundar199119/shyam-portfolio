@@ -1,33 +1,32 @@
 import SectionTitle from "./SectionTitle";
 
 
-const experiences=[
-
-{
-period:"2025 - Present",
-role:"Senior BizOps Engineer / DevOps Engineer",
-company:"Mastercard (via LTI Mindtree)",
-points:[
-"Built and maintained Jenkins CI/CD pipelines",
-"Implemented monitoring dashboards using Splunk and Dynatrace",
-"Automated deployment workflows using Chef Habitat",
-"Supported 24x7 payment platform operations"
-]
-},
+const experiences = [
 
 
 {
-period:"2018 - 2025",
+period:"2018 - Present",
 role:"Senior Software Engineer",
 company:"Mastercard Payment Platform",
 points:[
-"Developed Java Spring Boot microservices",
-"Worked on real-time payment clearing systems",
-"Designed REST APIs and backend services",
-"Worked with ActiveMQ messaging systems"
+"Developed Java 8/11 Spring Boot microservices for real-time payment processing systems",
+"Designed REST APIs and backend services using Spring Boot, Hibernate and JPA",
+"Implemented asynchronous processing using ActiveMQ messaging queues",
+"Improved system reliability through performance optimization and production troubleshooting",
+"Participated in Agile development, code reviews and mentoring junior engineers"
+]
+},
+
+{
+period:"2017 - 2018",
+role:"Senior Software Engineer",
+company:"Newt Global",
+points:[
+"Developed enterprise applications using Java, Spring Boot and Hibernate",
+"Designed REST APIs and database integrations",
+"Implemented backend business logic and application enhancements"
 ]
 }
-
 ];
 
 
